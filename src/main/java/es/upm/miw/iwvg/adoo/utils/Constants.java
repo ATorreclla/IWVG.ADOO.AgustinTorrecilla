@@ -15,5 +15,4 @@ public class Constants {
     public static final String TITTLE = "\nAnalisis y Diseño \nOrientacion a Objetos \nJuego MasterMind\n";
 
 
-
 }
