@@ -21,6 +21,7 @@ public class Game {
     private GameViewReader gameViewReader;
 
     public Game(){
+        this.boardController = new BoardController( this.ioController, Constants.PATTERN_PLAY);
         this.ioController = new IOTerminalController();
         this.patternPlay = String.format(Constants.PATTERN_PLAY, Constants.NUMBER_BALL_GUESS);
         this.players = new PlayerController[Constants.NUMBER_OF_PLAYERS];
@@ -56,6 +57,12 @@ public class Game {
     }
 
     private void setPlayers(int playMode) {
+        players[0] = new ComputerPlayerController( this.ioController, this.patternPlay);
+        if (playMode == 1) {
+            players[1] = new ManualPlayerController( this.ioController, this.patternPlay);
+        } else {
+            players[1] = new ComputerPlayerController( this.ioController, this.patternPlay);
+        }
     }
 
     public boolean isWinner(ColorBallSet colorBallSet) {

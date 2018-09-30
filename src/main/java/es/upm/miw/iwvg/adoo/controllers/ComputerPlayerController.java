@@ -1,12 +1,12 @@
 package es.upm.miw.iwvg.adoo.controllers;
 
-import es.upm.miw.iwvg.adoo.models.ColorBallSet;
-
 import es.upm.miw.iwvg.adoo.utils.RandomColorSetGenerator;
 
-public class ComputerAndManualPlayerController extends PlayerController {
+import es.upm.miw.iwvg.adoo.models.ColorBallSet;
 
-    public ComputerAndManualPlayerController ( IOController ioController, String patternShow) {
+public class ComputerPlayerController extends PlayerController {
+
+    public ComputerPlayerController( IOController ioController, String patternShow) {
         super( new RandomColorSetGenerator( ioController, patternShow));
     }
 

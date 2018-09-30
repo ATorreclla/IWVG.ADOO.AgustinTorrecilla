@@ -18,7 +18,6 @@ public class GameViewReader {
         do {
             option = ioController.readInt(Constants.OPTION.toString());
             ok = (option > 0 && option <= Constants.NUMBER_OF_PLAY_MODES);
-            System.out.println("ok es: " +  ok);
         } while (!ok);
         return option;
     }
