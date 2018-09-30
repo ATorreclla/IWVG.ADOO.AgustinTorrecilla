@@ -42,4 +42,15 @@ public class Constants {
 
     public static final String NEGATION = "N";
 
+    public static final String READ_PLAY = "Intento? [%d letras entre A-amarillo, R-rojo, V-verde, Z-azul, B-blanco, N-negro] ";
+
+    public static final String CONTINUE = "\nHan pasado todos los turnos posibles\n ";
+
+    public static final String AFIRMATION = "S";
+
+    public static final String PLAY_AGAIN = "\nQuiere continuar el juego?[S/N] ";
+
+    public static final String SECRET_CHAR = "*";
+
+    public static final String INTEGER = "valor entero";
 }

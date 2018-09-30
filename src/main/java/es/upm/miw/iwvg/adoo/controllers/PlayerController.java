@@ -1,8 +1,12 @@
 package es.upm.miw.iwvg.adoo.controllers;
 
-public class PlayerController {
+import es.upm.miw.iwvg.adoo.models.ColorBallSet;
+
+public abstract class PlayerController {
 
     protected ColorSetGeneratorController colorSetGeneratorController;
+
+    public abstract ColorBallSet generateColorBallSet();
 
     public PlayerController( ColorSetGeneratorController colorSetGeneratorController) {
         assert colorSetGeneratorController != null;

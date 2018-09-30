@@ -17,4 +17,13 @@ public enum Color {
     public static Color getRandom() {
         return values()[(int) (Math.random() * values().length)];
     }
+
+    public static Color getByStringCode(String code) {
+        for (Color color : Color.values()) {
+            if (code.equals(color.value)) {
+                return Color.valueOf(color.name());
+            }
+        }
+        return null;
+    }
 }
