@@ -1,6 +1,7 @@
 package es.upm.miw.iwvg.adoo.controllers;
 
 import es.upm.miw.iwvg.adoo.models.Board;
+import es.upm.miw.iwvg.adoo.models.ColorBallSet;
 
 public class BoardController {
 
@@ -8,6 +9,9 @@ public class BoardController {
 
     public BoardController( IOController ioController) {
 
+    }
+    public boolean isWinner(ColorBallSet colorBallSet) {
+        return true;
     }
 
     public String getPlainSecretBoardColorBallSet() {
