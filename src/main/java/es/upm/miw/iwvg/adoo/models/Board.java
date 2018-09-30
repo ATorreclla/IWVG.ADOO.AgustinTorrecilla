@@ -1,7 +1,14 @@
 package es.upm.miw.iwvg.adoo.models;
 
-import es.upm.miw.iwvg.adoo.controllers.ColorController;
+import java.util.ArrayList;
+
+import java.util.List;
+
+import es.upm.miw.iwvg.adoo.utils.Color;
+
 import es.upm.miw.iwvg.adoo.controllers.ColorSetGeneratorController;
+
+import es.upm.miw.iwvg.adoo.utils.Constants;
 
 public class Board {
 
@@ -11,12 +18,14 @@ public class Board {
 
     private int[] killedDamaged = new int[2];
 
-    public Board(ColorController colorSetGeneratorController) {
+    public Board(ColorSetGeneratorController colorSetGeneratorController) {
         assert colorSetGeneratorController != null;
         this.colorBallSet = null;
+        this.colorSetGeneratorController = colorSetGeneratorController;
     }
 
     public void setSecretBoardColorBallSet() {
+        this.colorBallSet = colorSetGeneratorController.generateColorBallSet();
     }
 
     public ColorBallSet getSecretBoardColorBallSet() {
@@ -28,13 +37,13 @@ public class Board {
         return colorBallSet.equals(colorBallSet);
     }
 
-    public int getKilled(ColorBallSet combination) {
-        calculateResultCombination(combination);
+    public int getKilled(ColorBallSet colorBallSet) {
+        calculateResultCombination(colorBallSet);
         return killedDamaged[0];
     }
 
-    public int getDamaged(ColorBallSet combination) {
-        calculateResultCombination(combination);
+    public int getDamaged(ColorBallSet colorBallSet) {
+        calculateResultCombination(colorBallSet);
         return killedDamaged[1];
     }
 
@@ -44,11 +53,30 @@ public class Board {
 
     private void calculateResultCombination(ColorBallSet colorBallSet) {
         assert (colorBallSet != null);
-
         int damaged = 0;
         int killed = 0;
-
+        List<Color> colorTested = new ArrayList<Color>();
+        for (int i = 0; i < Constants.NUMBER_BALL_GUESS; i++) {
+            Color color = colorBallSet.getColorAtPosition(i);
+            if (this.colorBallSet .equalsColorAtPosition(color, i)) {
+                killed++;
+            } else {
+                if (colorBallSet .containsColor(color) && !colorTested.contains(color)) {
+                    damaged++;
+                }
+                colorTested.add(color);
+            }
+        }
         this.killedDamaged[0] = killed;
         this.killedDamaged[1] = damaged;
+    }
+
+    @Override
+    public String toString() {
+        if (this.colorBallSet  != null) {
+            return this.colorBallSet .toString();
+        } else {
+            return super.toString();
+        }
     }
 }
