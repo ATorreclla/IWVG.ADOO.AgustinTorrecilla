@@ -1,8 +1,11 @@
 package es.upm.miw.iwvg.adoo.models;
 
 import es.upm.miw.iwvg.adoo.controllers.ColorController;
+import es.upm.miw.iwvg.adoo.controllers.ColorSetGeneratorController;
 
 public class Board {
+
+    private ColorSetGeneratorController colorSetGeneratorController;
 
     private ColorBallSet colorBallSet;
 
