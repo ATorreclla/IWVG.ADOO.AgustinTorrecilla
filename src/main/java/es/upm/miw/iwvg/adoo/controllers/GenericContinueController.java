@@ -5,6 +5,7 @@ import es.upm.miw.iwvg.adoo.utils.Constants;
 public class GenericContinueController extends RepetitionController  {
 
     public GenericContinueController(IOController ioController) {
+
         super(ioController);
     }
 

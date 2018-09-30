@@ -23,5 +23,4 @@ public abstract class IOController implements IOView {
 
     public abstract void writeln(String title);
 
-
 }

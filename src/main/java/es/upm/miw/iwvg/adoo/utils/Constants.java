@@ -28,8 +28,6 @@ public class Constants {
 
     public static final String NUMBER_MOVES_COMPLETES = "Numero de jugadas realizadas: ";
 
-    public static final String GOODBYE = "Fin del juego";
-
     public static final String PATTERN_PLAY = "[ABNRVZ]{%d}";
 
     public static final String SECRET_ANSWER = "El código de colores secretos es: [%s] ";
@@ -39,8 +37,6 @@ public class Constants {
     public static final String STRINGCHAIN = "de cadena de caracteres";
 
     public static final String WRITEFORMATERROR = "Hay un error en la entrada de datos: ";
-
-    public static final String DAMAGE = "damage";
 
     public static final String NEGATION = "N";
 

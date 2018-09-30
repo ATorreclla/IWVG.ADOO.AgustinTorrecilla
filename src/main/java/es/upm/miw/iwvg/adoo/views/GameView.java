@@ -9,6 +9,7 @@ public class GameView {
     private IOController ioController;
 
     public GameView(IOController ioController) {
+
         this.ioController = ioController;
     }
 

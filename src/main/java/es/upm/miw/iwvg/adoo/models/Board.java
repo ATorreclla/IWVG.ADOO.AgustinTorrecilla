@@ -32,18 +32,18 @@ public class Board {
         return this.colorBallSet;
     }
 
-    public boolean matchesWithSecretColorBallSet(ColorBallSet colorBallSet) {
-        assert (colorBallSet != null);
-        return colorBallSet.equals(colorBallSet);
+    public boolean matchesWithSecretColorBallSet(ColorBallSet colorBallSetCompare) {
+        assert (colorBallSetCompare != null);
+        return colorBallSet.equals(colorBallSetCompare);
     }
 
     public int getKilled(ColorBallSet colorBallSet) {
-        calculateResultCombination(colorBallSet);
+        calculateResultColorBallSet(colorBallSet);
         return killedDamaged[0];
     }
 
     public int getDamaged(ColorBallSet colorBallSet) {
-        calculateResultCombination(colorBallSet);
+        calculateResultColorBallSet(colorBallSet);
         return killedDamaged[1];
     }
 
@@ -51,7 +51,7 @@ public class Board {
         return numRound;
     }
 
-    private void calculateResultCombination(ColorBallSet colorBallSet) {
+    private void calculateResultColorBallSet(ColorBallSet colorBallSet) {
         assert (colorBallSet != null);
         int damaged = 0;
         int killed = 0;
@@ -61,7 +61,7 @@ public class Board {
             if (this.colorBallSet .equalsColorAtPosition(color, i)) {
                 killed++;
             } else {
-                if (colorBallSet .containsColor(color) && !colorTested.contains(color)) {
+                if (colorBallSet.containsColor(color) && !colorTested.contains(color)) {
                     damaged++;
                 }
                 colorTested.add(color);
@@ -74,7 +74,7 @@ public class Board {
     @Override
     public String toString() {
         if (this.colorBallSet  != null) {
-            return this.colorBallSet .toString();
+            return this.colorBallSet.toString();
         } else {
             return super.toString();
         }

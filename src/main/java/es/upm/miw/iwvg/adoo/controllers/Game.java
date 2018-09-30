@@ -8,7 +8,6 @@ import es.upm.miw.iwvg.adoo.views.GameViewCommentary;
 
 import es.upm.miw.iwvg.adoo.views.GameViewReader;
 
-
 public class Game {
 
     private IOController ioController;
@@ -21,9 +20,9 @@ public class Game {
     private GameViewReader gameViewReader;
 
     public Game(){
-        this.boardController = new BoardController( this.ioController, Constants.PATTERN_PLAY);
         this.ioController = new IOTerminalController();
         this.patternPlay = String.format(Constants.PATTERN_PLAY, Constants.NUMBER_BALL_GUESS);
+        this.boardController = new BoardController( this.ioController, Constants.PATTERN_PLAY);
         this.players = new PlayerController[Constants.NUMBER_OF_PLAYERS];
         this.gameController = new GameController(ioController, boardController);
         this.gameViewComment = new GameViewCommentary(ioController);

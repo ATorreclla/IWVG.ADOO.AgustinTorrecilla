@@ -22,7 +22,7 @@ public class RandomSecretColorSetGenerator extends ColorSetGeneratorController {
         for (int i = 0; i < Constants.NUMBER_BALL_GUESS; i++) {
             colors.add(Color.getRandom());
         }
-        ColorBallSet colorBallSet = new ColorBallSet( colors);
+        ColorBallSet colorBallSet = new ColorBallSet(colors);
         return colorBallSet;
     }
 }

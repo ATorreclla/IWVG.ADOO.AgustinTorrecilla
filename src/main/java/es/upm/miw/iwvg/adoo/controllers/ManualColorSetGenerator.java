@@ -33,8 +33,8 @@ public class ManualColorSetGenerator extends ColorSetGeneratorController {
         List<Color> colors = new ArrayList<Color>();
         colors.clear();
         for (int i = 0; i < colorBallSet.length(); i++) {
-            Color c = Color.getByStringCode(colorBallSet.substring(i, i + 1));
-            colors.add(c);
+            Color color = Color.getByStringCode(colorBallSet.substring(i, i + 1));
+            colors.add(color);
         }
         return colors;
     }
