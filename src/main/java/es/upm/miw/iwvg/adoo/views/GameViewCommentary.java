@@ -4,11 +4,11 @@ import es.upm.miw.iwvg.adoo.controllers.IOController;
 
 import es.upm.miw.iwvg.adoo.utils.Constants;
 
-public class GameViewComentary {
+public class GameViewCommentary {
 
     private IOController ioController;
 
-    public GameViewComentary(IOController ioController){
+    public GameViewCommentary(IOController ioController){
         this.ioController = ioController;
     }
 

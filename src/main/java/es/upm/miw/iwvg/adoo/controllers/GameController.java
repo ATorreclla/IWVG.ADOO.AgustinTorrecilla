@@ -1,7 +1,9 @@
 package es.upm.miw.iwvg.adoo.controllers;
 
 import es.upm.miw.iwvg.adoo.views.GameView;
+
 import es.upm.miw.iwvg.adoo.models.ColorBallSet;
+
 import es.upm.miw.iwvg.adoo.utils.Constants;
 
 public class GameController {
@@ -10,11 +12,6 @@ public class GameController {
     private BoardController boardController;
     private GameView gameView;
     private RepetitionController repetitionController;
-
-    public GameController(IOController ioController ){
-        this.ioController = ioController;
-        this.boardController = boardController;
-    }
 
     public GameController(IOController ioController, BoardController boardController) {
         this.ioController = ioController;
@@ -39,17 +36,6 @@ public class GameController {
         ioController.writeln(
                 String.format(Constants.SECRET_ANSWER.toString(),
                         boardController.getPlainSecretBoardColorBallSet()));
-    }
-    public void writeResultCombination() {
-
-    }
-
-    public void writeHiddenComputerPlayerSecretCombination() {
-
-    }
-
-    public void writePlainComputerPlayerSecretCombination() {
-
     }
 
     public boolean keepPlaying() {
