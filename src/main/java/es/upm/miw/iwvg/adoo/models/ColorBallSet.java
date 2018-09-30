@@ -16,12 +16,6 @@ public class ColorBallSet {
         this.colors = new ArrayList<Color>(colors);
     }
 
-    public void setCombination(Color... colors) {
-        for (Color color : colors) {
-            this.colors.add(color);
-        }
-    }
-
     public boolean equalsColorAtPosition(Color color, int position) {
         assert color != null;
         assert position > 0 && position <= Constants.NUMBER_BALL_GUESS;
@@ -38,5 +32,20 @@ public class ColorBallSet {
         return colors.contains(color);
     }
 
+    public boolean equals(ColorBallSet colorBallSet) {
+        for (int i = 0; i < Constants.NUMBER_BALL_GUESS; i++) {
+            if (!this.equalsColorAtPosition(colorBallSet.getColorAtPosition(i), i))
+                return false;
+        }
+        return true;
+    }
 
+    @Override
+    public String toString() {
+        String colorString = "";
+        for (Color color : colors) {
+            colorString = colorString + color.toString();
+        }
+        return colorString;
+    }
 }
