@@ -17,6 +17,8 @@ public abstract class ColorSetGeneratorController {
     protected String patternShow;
 
     public ColorSetGeneratorController( IOController ioController, String patternShow) {
+        assert ioController != null;
+        assert patternShow != null;
         this.ioController = ioController;
         this.patternShow = patternShow;
     }
