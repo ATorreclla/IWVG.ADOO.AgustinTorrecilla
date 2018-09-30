@@ -15,6 +15,7 @@ public class IO implements IOView{
     private BufferedReader bufferedReader = new BufferedReader
             (new InputStreamReader(System.in));
 
+    @Override
     public String readString(String title) {
         String input = null;
         boolean ok = false;
@@ -49,6 +50,7 @@ public class IO implements IOView{
     public void writeln() {
         System.out.println();
     }
+
     @Override
     public void write(String title) {
         System.out.print(title);
