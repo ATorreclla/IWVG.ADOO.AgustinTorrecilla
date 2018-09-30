@@ -23,8 +23,6 @@ public class RandomSecretColorSetGenerator extends ColorSetGeneratorController {
             colors.add(Color.getRandom());
         }
         ColorBallSet colorBallSet = new ColorBallSet( colors);
-        ioController.writeln(String.format(Constants.READ_PLAY.toString(),
-                Constants.NUMBER_BALL_GUESS) + colorBallSet.toString());
         return colorBallSet;
     }
 }
