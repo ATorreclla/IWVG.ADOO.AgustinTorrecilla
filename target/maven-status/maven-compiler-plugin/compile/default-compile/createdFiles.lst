@@ -1,0 +1,14 @@
+es\upm\miw\iwvg\adoo\controllers\PlayerController.class
+es\upm\miw\iwvg\adoo\models\Board.class
+es\upm\miw\iwvg\adoo\utils\Color.class
+es\upm\miw\iwvg\adoo\controllers\Game.class
+es\upm\miw\iwvg\adoo\utils\IO.class
+es\upm\miw\iwvg\adoo\views\IOView.class
+es\upm\miw\iwvg\adoo\controllers\GameController.class
+es\upm\miw\iwvg\adoo\controllers\IOController.class
+es\upm\miw\iwvg\adoo\controllers\BoardController.class
+es\upm\miw\iwvg\adoo\controllers\ColorSetGeneratorController.class
+es\upm\miw\iwvg\adoo\views\GameView.class
+es\upm\miw\iwvg\adoo\models\ColorBallSet.class
+es\upm\miw\iwvg\adoo\utils\Constants.class
+es\upm\miw\iwvg\adoo\MasterMind.class
