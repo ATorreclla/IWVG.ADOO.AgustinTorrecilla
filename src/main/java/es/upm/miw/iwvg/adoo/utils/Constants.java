@@ -2,6 +2,8 @@ package es.upm.miw.iwvg.adoo.utils;
 
 public class Constants {
 
+    public static final int DEFAULT_PLAY_MODE = 1;
+
     public static final int NUMBER_BALL_GUESS = 4;
 
     public static final int NUMBER_OF_PLAYERS = 2;
