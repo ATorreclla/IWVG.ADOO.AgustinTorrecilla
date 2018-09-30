@@ -21,8 +21,8 @@ public class GameController {
 
     public void writeResultColorBallSet(ColorBallSet colorBallSet) {
         assert (colorBallSet != null);
-        gameView.writeResultConstants(boardController.getKilled(),
-                boardController.getDamaged());
+        gameView.writeResultConstants(boardController.getKilled(colorBallSet),
+                boardController.getDamaged(colorBallSet));
     }
 
     public void writeHiddenComputerPlayerSecretColorBallSet() {
@@ -39,10 +39,12 @@ public class GameController {
     }
 
     public boolean keepPlaying() {
+
         return this.repetitionController.keepRunning();
     }
 
     public boolean isWinner(ColorBallSet colorBallSet) {
+
         return boardController.isWinner(colorBallSet);
     }
 }
