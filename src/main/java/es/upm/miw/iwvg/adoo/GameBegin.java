@@ -1,11 +1,11 @@
 package es.upm.miw.iwvg.adoo;
 
 import es.upm.miw.iwvg.adoo.controllers.Game;
-public class InitGame {
 
+public class GameBegin {
     private Game game;
 
-    public InitGame(){
+    public GameBegin() {
         init();
         starting();
     }
@@ -14,7 +14,11 @@ public class InitGame {
         this.game = new Game();
     }
 
-    private void starting(){
+    private void starting() {
         game.play();
+        while(game.keepRunning()){
+            game.play();
+        }
+        System.exit(1);
     }
 }

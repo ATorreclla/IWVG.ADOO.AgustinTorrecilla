@@ -18,11 +18,7 @@ public class Game {
 
     }
 
-    private void setContinueController(){
-
-    }
-
-    public void keepRunning(){
+    private void setContinueController() {
 
     }
 
@@ -33,4 +29,10 @@ public class Game {
     private void setSecretBoardColorBallSet(){
 
     }
+
+    public boolean keepRunning() {
+        return true;
+    }
+
+
 }
