@@ -30,6 +30,7 @@ public class IO implements IOView{
         } while (!ok);
         return input;
     }
+
     @Override
     public String readStringContinue(String title) {
         String input = null;

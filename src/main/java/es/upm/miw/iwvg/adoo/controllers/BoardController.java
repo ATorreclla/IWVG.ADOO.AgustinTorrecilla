@@ -1,36 +1,36 @@
 package es.upm.miw.iwvg.adoo.controllers;
 
 import es.upm.miw.iwvg.adoo.models.Board;
+
 import es.upm.miw.iwvg.adoo.models.ColorBallSet;
 
 public class BoardController {
 
     public Board board;
 
-    public BoardController( IOController ioController) {
-
+    public BoardController( IOController ioController, String COLORBALLSET_MASTER) {
+        this.board = new Board(new RandomSecretColorSetGenerator( ioController, COLORBALLSET_MASTER));
     }
+
     public boolean isWinner(ColorBallSet colorBallSet) {
-        return true;
-    }
-
-    public String getPlainSecretBoardColorBallSet() {
-       return "";
+        return board.matchesWithSecretColorBallSet(colorBallSet);
     }
 
     public void setSecretBoardColorBallSet() {
+        board.setSecretBoardColorBallSet();
     }
 
-    public boolean isWinner() {
-        return true;
+    public String getPlainSecretBoardColorBallSet() {
+        return board.getSecretBoardColorBallSet().toString();
     }
 
-    public int getKilled() {
-       return 1;
+    public int getDamaged(ColorBallSet colorBallSet) {
+        assert (colorBallSet != null);
+        return board.getDamaged(colorBallSet);
     }
 
-    public int getDamaged() {
-
-        return 1;
+    public int getKilled(ColorBallSet colorBallSet) {
+        assert (colorBallSet != null);
+        return board.getKilled(colorBallSet);
     }
 }
