@@ -16,6 +16,12 @@ public class Constants {
 
     public static final int NUMBER_BALL_GUESS = 4;
 
+    public static final String PLAY_HUMAN = "1. Partida ";
 
+    public static final String PLAY_COMPUTER = "2. Demo ";
+
+    public static final String OPTION = "Opcion? ";
+
+    public static final String NUMBER_MOVES_COMPLETES = "Numero de jugadas realizadas: ";
 
 }
